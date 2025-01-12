@@ -6,10 +6,18 @@ final secondaryColor = Color(0xff0A8ED980);
 final whiteColor = Colors.white;
 final blackColor = Colors.black;
 final transparentColor = Color(0xff0000003D);
+final bgColor = Color(0xffFAFAFA);
+final greyColor = Color(0xff858585);
 
 final defaultTextStyle = GoogleFonts.raleway(
   fontSize: 19,
   fontWeight: FontWeight.w500,
+  color: blackColor,
+);
+
+final bodySmallText = GoogleFonts.raleway(
+  fontSize: 14,
+  fontWeight: FontWeight.w400,
   color: blackColor,
 );
 
@@ -21,6 +29,9 @@ ThemeData theme_data() => ThemeData(
         foregroundColor: blackColor, // Dark gray app bar color
         iconTheme: IconThemeData(color: Colors.white), // White icons
       ),
+      textTheme: TextTheme(
+          bodySmall: defaultTextStyle.copyWith(
+              fontSize: 14, fontWeight: FontWeight.w400)),
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ButtonStyle(
           backgroundColor: MaterialStateProperty.all<Color>(
@@ -31,7 +42,8 @@ ThemeData theme_data() => ThemeData(
       ),
       inputDecorationTheme: InputDecorationTheme(
         filled: true,
-        fillColor: Color(0xFF303030), // Dark gray input field background
+        border: InputBorder.none,
+        fillColor: Color(0xffF7F7F7), // Dark gray input field background
         hintStyle: TextStyle(color: Colors.grey), // White hint text
       ),
     );

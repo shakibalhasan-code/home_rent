@@ -1,6 +1,5 @@
 const String icBath = 'assets/icons/ic_bath.svg';
 const String icBed = 'assets/icons/ic_bed.svg';
-const String icBookmarkPng = 'assets/icons/ic_bookmark.png';
 const String icBookmarkSvg = 'assets/icons/ic_bookmark.svg';
 const String icFilter = 'assets/icons/ic_filter.svg';
 const String icHelp = 'assets/icons/ic_help.svg';
@@ -12,6 +11,8 @@ const String icNotification = 'assets/icons/ic_notification.svg';
 const String icProfile = 'assets/icons/ic_profile.svg';
 const String icSettings = 'assets/icons/ic_settings.svg';
 const String icMenu = 'assets/icons/ic_menu.svg';
+const String icDownArrow = 'assets/icons/ic_down_arrow.svg';
+const String icSearch = 'assets/icons/ic_search.svg';
 
 const String home1 = 'assets/images/home_1.png';
 const String home2 = 'assets/images/home_2.png';

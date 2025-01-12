@@ -43,7 +43,7 @@ class _MenuScreenPageState extends State<MenuScreenPage> {
           ),
           const Divider(color: Colors.white, thickness: 1),
           DrawerItem(
-            icon: icBookmarkPng,
+            icon: icBookmarkSvg,
             label: 'Bookmark',
             isClicked: selectedIndex == 3,
             onTap: () => _onItemSelected(3),
