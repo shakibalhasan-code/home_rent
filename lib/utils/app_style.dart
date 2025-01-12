@@ -8,6 +8,7 @@ final blackColor = Colors.black;
 final transparentColor = Color(0xff0000003D);
 final bgColor = Color(0xffFAFAFA);
 final greyColor = Color(0xff858585);
+final simpleGrey = Color(0xffF7F7F7);
 
 final defaultTextStyle = GoogleFonts.raleway(
   fontSize: 19,
@@ -18,7 +19,7 @@ final defaultTextStyle = GoogleFonts.raleway(
 final bodySmallText = GoogleFonts.raleway(
   fontSize: 14,
   fontWeight: FontWeight.w400,
-  color: blackColor,
+  color: greyColor,
 );
 
 ThemeData theme_data() => ThemeData(
