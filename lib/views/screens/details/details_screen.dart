@@ -246,7 +246,7 @@ class DetailsScreen extends StatelessWidget {
                                       borderRadius: BorderRadius.circular(10),
                                       image: DecorationImage(
                                         image: AssetImage(
-                                            'assets/images/home_${index}.png'),
+                                            'assets/images/home_${index + 1}.png'),
                                         fit: BoxFit.cover,
                                       ),
                                     ),

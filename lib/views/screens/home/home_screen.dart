@@ -101,17 +101,22 @@ class HomeScreen extends StatelessWidget {
                   const SizedBox(height: 20),
 
                   // Property Type Filter
-                  SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    child: Row(
-                      children: [
-                        buildFilterChip('House', true),
-                        buildFilterChip('Apartment', false),
-                        buildFilterChip('Hotel', false),
-                        buildFilterChip('Villa', false),
-                      ],
-                    ),
-                  ),
+                  Obx(() {
+                    return Row(
+                      children:
+                          List.generate(_homeState.filterList.length, (index) {
+                        return FilterChipWidget(
+                          onTap: () {
+                            print('filter ${_homeState.filterList[index]}');
+                            _homeState.selectedTabIndex(index);
+                          },
+                          label: _homeState.filterList[index],
+                          isSelected:
+                              _homeState.filterTabSelectedIndex.value == index,
+                        );
+                      }),
+                    );
+                  }),
                   const SizedBox(height: 24),
                 ],
               ),
