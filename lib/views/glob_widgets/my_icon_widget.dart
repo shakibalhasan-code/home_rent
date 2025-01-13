@@ -4,7 +4,9 @@ import 'package:flutter_svg/svg.dart';
 class MyIconWidget extends StatelessWidget {
   final String svgIcon;
   final bool? isTint;
-  const MyIconWidget({super.key, required this.svgIcon, this.isTint});
+  final Color iconColor;
+  const MyIconWidget(
+      {super.key, required this.svgIcon, this.isTint, required this.iconColor});
 
   @override
   Widget build(BuildContext context) {
@@ -15,8 +17,9 @@ class MyIconWidget extends StatelessWidget {
           svgIcon,
           height: 24,
           width: 24,
+          color: iconColor,
         ),
-        if (isTint != null)
+        if (isTint == true)
           Positioned(
             top: 2,
             right: 2,

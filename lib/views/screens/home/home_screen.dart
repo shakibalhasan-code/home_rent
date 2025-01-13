@@ -4,8 +4,9 @@ import 'package:home_rent_ird_foundation/state/home/home_state.dart';
 import 'package:home_rent_ird_foundation/views/glob_widgets/my_icon_widget.dart';
 import 'package:home_rent_ird_foundation/utils/app_style.dart';
 import 'package:home_rent_ird_foundation/utils/const.dart';
+import 'package:home_rent_ird_foundation/views/screens/details/details_screen.dart';
 import 'package:home_rent_ird_foundation/views/screens/home/item/nearby_card_widget.dart';
-import 'package:home_rent_ird_foundation/views/screens/home/widgets/best_card.dart';
+import 'package:home_rent_ird_foundation/views/screens/home/item/best_card.dart';
 
 import 'widgets/tab_widget.dart';
 
@@ -50,7 +51,10 @@ class HomeScreen extends StatelessWidget {
                           ),
                         ],
                       ),
-                      MyIconWidget(svgIcon: icNotification, isTint: true),
+                      MyIconWidget(
+                          iconColor: blackColor,
+                          svgIcon: icNotification,
+                          isTint: true),
                     ],
                   ),
                   const SizedBox(height: 20),
@@ -151,7 +155,12 @@ class HomeScreen extends StatelessWidget {
                         itemCount: _homeState.homes.length,
                         itemBuilder: (context, index) {
                           final house = _homeState.homes[index];
-                          return buildNearbyPropertyCard(house);
+                          return NearbyPropertyCard(
+                            homeModel: house,
+                            onTap: () {
+                              Get.to(DetailsScreen(homeModel: house));
+                            },
+                          );
                         },
                       ),
                     ),
@@ -193,7 +202,11 @@ class HomeScreen extends StatelessWidget {
                       delegate: SliverChildBuilderDelegate(
                         (context, index) {
                           final home = _homeState.homes[index];
-                          return buildBestPropertyCard(home);
+                          return BestPropertyCard(
+                              homeModel: home,
+                              onTap: () {
+                                Get.to(DetailsScreen(homeModel: home));
+                              });
                         },
                         childCount: _homeState.homes.length,
                       ),

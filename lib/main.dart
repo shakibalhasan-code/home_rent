@@ -3,6 +3,7 @@ import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
 import 'package:get/get.dart';
 import 'package:get/get_instance/src/bindings_interface.dart';
 import 'package:get/route_manager.dart';
+import 'package:home_rent_ird_foundation/state/details_screen_state/details_screen_state.dart';
 import 'package:home_rent_ird_foundation/state/home/home_state.dart';
 import 'package:home_rent_ird_foundation/utils/app_style.dart';
 import 'package:home_rent_ird_foundation/utils/binding.dart';
@@ -22,6 +23,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       initialBinding: BindingsBuilder(() {
         Get.put(HomeState());
+        Get.put(DetailsScreenState());
       }),
       theme: theme_data(),
       home: Scaffold(

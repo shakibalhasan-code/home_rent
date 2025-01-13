@@ -13,6 +13,8 @@ const String icSettings = 'assets/icons/ic_settings.svg';
 const String icMenu = 'assets/icons/ic_menu.svg';
 const String icDownArrow = 'assets/icons/ic_down_arrow.svg';
 const String icSearch = 'assets/icons/ic_search.svg';
+const String icBack = 'assets/icons/ic_back.svg';
+const String icPhone = 'assets/icons/ic_phone.svg';
 
 const String home1 = 'assets/images/home_1.png';
 const String home2 = 'assets/images/home_2.png';
@@ -22,3 +24,4 @@ const String home5 = 'assets/images/home_5.png';
 const String home6 = 'assets/images/home_6.png';
 const String home7 = 'assets/images/home_7.png';
 const String person1 = 'assets/images/person_1.png';
+const String map = 'assets/images/map.png';

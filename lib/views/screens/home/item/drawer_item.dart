@@ -1,15 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:home_rent_ird_foundation/utils/app_style.dart';
+import 'package:home_rent_ird_foundation/views/glob_widgets/my_icon_widget.dart';
 
 class DrawerItem extends StatefulWidget {
   final String icon;
   final String label;
   final bool isClicked;
   final VoidCallback onTap;
+  final bool? isTint;
 
   const DrawerItem(
       {Key? key,
+      this.isTint,
       required this.icon,
       required this.label,
       required this.isClicked,
@@ -37,12 +40,10 @@ class _DrawerItemState extends State<DrawerItem> {
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 0),
           child: ListTile(
-            leading: SvgPicture.asset(
-              widget.icon,
-              color: widget.isClicked ? primaryColor : whiteColor,
-              height: 24,
-              width: 24,
-            ),
+            leading: MyIconWidget(
+                isTint: widget.isTint,
+                svgIcon: widget.icon,
+                iconColor: widget.isClicked ? primaryColor : whiteColor),
             title: Text(
               widget.label,
               style: defaultTextStyle.copyWith(

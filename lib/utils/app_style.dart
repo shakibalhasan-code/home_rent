@@ -6,7 +6,7 @@ final secondaryColor = Color(0xff0A8ED980);
 final whiteColor = Colors.white;
 final blackColor = Colors.black;
 final transparentColor = Color(0xff0000003D);
-final bgColor = Color(0xffFAFAFA);
+final bgColor = Colors.grey[50];
 final greyColor = Color(0xff858585);
 final simpleGrey = Color(0xffF7F7F7);
 

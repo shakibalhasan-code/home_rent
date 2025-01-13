@@ -23,6 +23,7 @@ class MenuScreenPage extends StatelessWidget {
                       children: [
                         const Divider(color: Colors.white, thickness: 1),
                         DrawerItem(
+                          isTint: item['isTint'],
                           icon: item['icon'],
                           label: item['label'],
                           isClicked:
@@ -32,6 +33,7 @@ class MenuScreenPage extends StatelessWidget {
                       ],
                     )
                   : DrawerItem(
+                      isTint: item['isTint'],
                       icon: item['icon'],
                       label: item['label'],
                       isClicked: _menuController.selectedIndex.value == index,
