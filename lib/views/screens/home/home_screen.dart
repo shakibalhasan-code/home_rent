@@ -24,7 +24,7 @@ class HomeScreen extends StatelessWidget {
     final _homeState = Get.find<HomeState>();
 
     return Scaffold(
-      backgroundColor: whiteColor,
+      backgroundColor: Colors.grey[50],
       resizeToAvoidBottomInset: false,
       body: SafeArea(
         child: SingleChildScrollView(

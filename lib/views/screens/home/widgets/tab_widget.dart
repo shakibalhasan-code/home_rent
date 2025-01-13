@@ -15,7 +15,7 @@ Widget buildFilterChip(String label, bool isSelected) {
       onSelected: (bool value) {},
       backgroundColor: Colors.white,
       selectedColor: primaryColor,
-      checkmarkColor: Colors.white,
+      showCheckmark: false,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(20),
       ),
