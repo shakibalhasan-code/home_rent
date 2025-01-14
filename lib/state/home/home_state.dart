@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
 import 'package:home_rent_ird_foundation/utils/const.dart';
 
-import '../../core/models/home_model.dart';
+import '../../data/models/home_model.dart';
 
 class HomeState extends GetxController {
   final RxList<HomeModel> homes = <HomeModel>[].obs;

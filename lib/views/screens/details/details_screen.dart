@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
-import 'package:home_rent_ird_foundation/core/models/home_model.dart';
+import 'package:home_rent_ird_foundation/data/models/home_model.dart';
 import 'package:home_rent_ird_foundation/state/details_screen_state/details_screen_state.dart';
 
 import 'package:home_rent_ird_foundation/utils/app_style.dart';
@@ -146,8 +146,8 @@ class DetailsScreen extends StatelessWidget {
                                 RichText(
                                   text: TextSpan(
                                     text: isExpanded
-                                        ? homeModel
-                                            .description // Show full text if expanded
+                                        ? homeModel.description
+                                        // Show full text if expanded
                                         : _detailsState.getTruncatedText(
                                             homeModel.description,
                                             100), // Limit to 100 characters (or any number)

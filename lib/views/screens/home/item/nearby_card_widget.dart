@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:home_rent_ird_foundation/core/models/home_model.dart';
+import 'package:home_rent_ird_foundation/data/models/home_model.dart';
 import 'package:home_rent_ird_foundation/utils/app_style.dart';
 import 'package:home_rent_ird_foundation/utils/const.dart';
 import 'package:home_rent_ird_foundation/views/glob_widgets/transparent_widget.dart';
